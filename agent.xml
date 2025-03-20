@@ -1,0 +1,5 @@
+<vehicles>
+    <vehicle name="Car" class="class2.Car"/>
+    <vehicle name="Bike" class="class2.Bike"/>
+    <vehicle name="Air" class="class2.Air"/>
+</vehicles>

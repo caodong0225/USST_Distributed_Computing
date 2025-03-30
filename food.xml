@@ -1,0 +1,4 @@
+<foods>
+    <food name="Beef" class="aop.Beef"/>
+    <food name="Fish" class="aop.Fish"/>
+</foods>

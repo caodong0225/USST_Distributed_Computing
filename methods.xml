@@ -1,0 +1,5 @@
+<methods>
+    <method name="sendFruit"/>
+    <method name="pay"/>
+    <method name="inspect"/>
+</methods>

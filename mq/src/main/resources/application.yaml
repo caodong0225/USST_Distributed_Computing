@@ -1,0 +1,12 @@
+spring:
+  thymeleaf:
+    enabled: true
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    cache: false
+  rabbitmq:
+    host: localhost # 通常是 localhost 或具体 IP
+    port: 5672               # RabbitMQ 消息通信端口（不是 15672）
+    username: admin
+    password: 123456

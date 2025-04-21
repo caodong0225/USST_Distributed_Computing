@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>订单列表</title>
+</head>
+<body>
+<h2>当前已下单商品</h2>
+
+<table border="1" cellpadding="8">
+    <thead>
+    <tr>
+        <th>订单 ID</th>
+        <th>商品名称</th>
+        <th>单价</th>
+        <th>数量</th>
+        <th>订单状态</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="order : ${orders}">
+        <td th:text="${order.orderId}"></td>
+        <td th:text="${order.goodsName}"></td>
+        <td th:text="${order.goodsPrice}"></td>
+        <td th:text="${order.goodsCount}"></td>
+        <td th:text="${order.orderStatus}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<br>
+<a href="/order/new">返回下单</a>
+</body>
+</html>

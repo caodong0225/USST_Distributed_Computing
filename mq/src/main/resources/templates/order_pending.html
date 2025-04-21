@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>待处理订单</title>
+</head>
+<body>
+<h2>待处理订单</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>订单ID</th>
+        <th>商品名称</th>
+        <th>数量</th>
+        <th>单价</th>
+        <th>状态</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="order : ${orders}">
+        <td th:text="${order.orderId}"></td>
+        <td th:text="${order.goodsName}"></td>
+        <td th:text="${order.goodsCount}"></td>
+        <td th:text="${order.goodsPrice}"></td>
+        <td th:text="${order.orderStatus}"></td>
+        <td>
+            <form th:action="@{/order/process/{id}(id=${order.orderId})}" method="post">
+                <button type="submit">处理订单</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<p><a th:href="@{/order/list}">查看全部订单</a></p>
+
+</body>
+</html>

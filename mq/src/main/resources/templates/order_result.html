@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>订单提交结果</title>
+</head>
+<body>
+<a th:href="@{/order/pending}">查看待处理订单</a>
+<h2>订单提交结果</h2>
+<p><strong>订单 ID：</strong> <span th:text="${orderId}"></span></p>
+<p><strong>商品：</strong> <span th:text="${order.goodsName}"></span></p>
+<p><strong>单价：</strong> <span th:text="${order.goodsPrice}"></span></p>
+<p><strong>数量：</strong> <span th:text="${order.goodsCount}"></span></p>
+<p><strong>状态：</strong> <span th:text="${order.orderStatus}"></span></p>
+
+<a href="/order/new">返回继续下单</a>
+</body>
+</html>

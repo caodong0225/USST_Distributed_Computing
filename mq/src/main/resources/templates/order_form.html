@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>下单页面</title>
+</head>
+<body>
+<h2>提交订单</h2>
+<a th:href="@{/order/pending}">查看待处理订单</a>
+<a href="/order/list">查看历史订单记录</a>
+<form th:action="@{/order/submit}" method="post">
+    <label>商品名称：</label>
+    <input type="text" name="goodsName" />
+    <br/>
+    <label>商品单价：</label>
+    <input type="text" name="goodsPrice" />
+    <br/>
+    <label>商品数量：</label>
+    <input type="text" name="goodsCount" />
+
+    <button type="submit">提交订单</button>
+</form>
+</body>
+</html>
